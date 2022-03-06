@@ -1,20 +1,23 @@
-import React from 'react';
-import Header from './Header';
+import React from "react";
+import Header from "./Header";
+import ThemeContext from "./ThemeContext";
 
 export const buttonThemes = {
   blue: {
-    color: 'white',
-    backgroundColor: 'blue'
+    color: "white",
+    backgroundColor: "blue",
   },
   black: {
-    color: 'white',
-    backgroundColor: 'black'
+    color: "white",
+    backgroundColor: "black",
   },
 };
 
 function App() {
   return (
-    <Header />
+    <ThemeContext.Provider value={buttonThemes}>
+      <Header />
+    </ThemeContext.Provider>
   );
 }
 

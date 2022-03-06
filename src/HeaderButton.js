@@ -1,9 +1,12 @@
-import React from 'react';
+import React from "react";
+
+import ThemeContext from "./ThemeContext";
 
 function HeaderButton() {
+  const colorChoice = React.useContext(ThemeContext);
   return (
     <div>
-      <button>Press me</button>
+      <button style={colorChoice.black}>Press me</button>
     </div>
   );
 }
